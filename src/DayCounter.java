@@ -1,19 +1,18 @@
 public class DayCounter {
     public static void main(String[] args) {
-        int yearIn = 2016;
-        int monthIn = 1;
+        int yearIn = 2020;
+        int monthIn = 11;
         if (args.length > 0) {
             monthIn = Integer.parseInt(args[0]);
         }
         if (args.length > 1) {
             yearIn = Integer.parseInt(args[1]);
         }
-
-        System.out.println(monthIn + " / " + yearIn + " ma... " +countDays(monthIn,yearIn)+ " dni.");
+        System.out.println(monthIn + " / " + yearIn + " ma... " + countDays(monthIn, yearIn) + " dni.");
     }
 
     static int countDays(int month, int year) {
-        int count = -1;
+        int count = 0;
         switch (month) {
             case 1:
             case 3:
@@ -31,17 +30,17 @@ public class DayCounter {
                 count = 30;
                 break;
             case 2:
-            if (year % 4 == 0) {
-                count=29;
-            } else {
-                count = 28;
-            }
-            if ((year % 100 == 0) && (year % 400 == 0)) {
-                count = 28;
-            }
+                if (year % 4 == 0) {
+                    count = 29;
+                } else {
+                    count = 28;
+                }
+                if ((year % 100 == 0) && (year % 400 == 0)) {
+                    count = 28;
+                }
+            default:
+                System.out.println("Wrong Month Selected!");
         }
-
-        return 0;
+        return count;
     }
-
 }

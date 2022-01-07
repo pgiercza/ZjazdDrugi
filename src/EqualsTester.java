@@ -10,13 +10,10 @@ public class EqualsTester {
         System.out.println("Ta sama wartość?: " + st2.equals(st1));
         boolean check1 = "Texas" instanceof String;
         System.out.println(check1);
-
-        Object obj=new Object();
-        boolean check2=obj instanceof String;
+        Object obj = new Object();
+        boolean check2 = obj instanceof String;
         System.out.println(check2);
-
-        boolean check3="ikjfwfe" instanceof Object;
+        boolean check3 = "ikjfwfe" instanceof Object;
         System.out.println(check3);
-
     }
 }

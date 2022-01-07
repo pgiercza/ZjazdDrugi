@@ -1,5 +1,4 @@
 import java.util.Locale;
-
 public class Formater {
     public static void main(String[] args) {
         int accountBalance = 15_005;
@@ -15,6 +14,5 @@ public class Formater {
         System.out.println(pi);
         System.out.printf("%.11f%n",pi);
         System.out.printf(new Locale("us"),"%.3f%n",pi);
-
     }
 }

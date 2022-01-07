@@ -7,18 +7,12 @@ public class Sum1ToN {
         int n = scanner.nextInt();
         int number = 1;
         int sum = 1;
-
         System.out.print("Suma 1");
         while (number < n) {
-
-
             number++;
             sum += number;
             System.out.print(" + " + (number));
         }
-
-        System.out.println(" = "+(sum));
-
-
+        System.out.println(" = " + (sum));
     }
 }
