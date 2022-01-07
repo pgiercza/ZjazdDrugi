@@ -1,4 +1,41 @@
+import java.util.Scanner;
+
+
 public class Domowe2Zadanie1 {
+    public static void main(String[] args) {
+        Domowe2Zadanie1 a1 = new Domowe2Zadanie1();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] array=a1.makeSequence(n);
+        System.out.print("Tablica przed konwersją: [ ");
+        a1.showArray(array,n);
+        a1.changeSequence(array,n);
+        System.out.print("Tablica po konwersji: [ ");
+        a1.showArray(array,n);
+    }
+
+    int[] makeSequence(int arrayLength) {
+        int[] array = new int[arrayLength];
+        for (int i = 0; i < arrayLength; i++) {
+            array[i] = i + 1;
+        }
+        return array;
+    }
+
+    void changeSequence(int[] array,int arrayLength) {
+        for (int i = 0; i < arrayLength; i++) {
+            array[i] = arrayLength - i;
+        }
+    }
+
+    void showArray(int[] currentArray,int arrayLength){
+
+        for (int i = 0; i < arrayLength; i++) {
+            System.out.print(currentArray[i]);
+            System.out.print(" ");
+        }
+        System.out.println("]");
+    }
 }
 
 
